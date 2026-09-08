@@ -104,9 +104,16 @@ func _on_life_sim_button_pressed() -> void:
 	click_effect.play()
 	_on_genre_button_pressed("LifeSim")
 
+func _on_adventure_pressed() -> void:
+	click_effect.play()
+	_on_genre_button_pressed("Adventure")
+
 func _on_genre_button_pressed(genre: String) -> void:
 	click_effect.play()
 	filter_changed.emit(genre)
+
+func _on_store_button_pressed() -> void:
+	click_effect.play()
 
 func _on_show_all_button_pressed() -> void:
 	click_effect.play()

@@ -147,6 +147,33 @@ _data = {
 &"move_info": SubResource("Animation_y2tfy")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epl82"]
+texture = ExtResource("4_kvk58")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i7bs6"]
+texture = ExtResource("3_won51")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4hl4j"]
+texture = ExtResource("4_kvk58")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_i7bs6"]
+font = ExtResource("3_p23kf")
+font_size = 35
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="ProjectsComp" type="Control" unique_id=832354694]
 layout_mode = 3
 anchors_preset = 15
@@ -474,6 +501,19 @@ text = "Life Simulator
 
 "
 
+[node name="Adventure" type="Button" parent="BGenrePanel/ScrollContainer/VBoxContainer" unique_id=2027252767]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_p23kf")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_dnosv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
+text = "Adventure
+
+
+"
+
 [node name="InfoPanel" type="Panel" parent="." unique_id=435651258]
 z_index = 1
 layout_mode = 0
@@ -595,6 +635,35 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
 icon = ExtResource("5_qaqjs")
 icon_alignment = 1
 
+[node name="StoreButton" type="LinkButton" parent="InfoPanel" unique_id=1272673617]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.012
+anchor_right = 0.97200006
+anchor_bottom = 0.07700001
+offset_left = 0.00024414063
+offset_top = 0.027999878
+offset_right = 0.13641357
+offset_bottom = 0.012992859
+grow_horizontal = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_epl82")
+
+[node name="Label" type="Label" parent="InfoPanel/StoreButton" unique_id=1756935972]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_i7bs6")
+theme_override_styles/focus = SubResource("StyleBoxTexture_4hl4j")
+text = "VIEW IN STORE"
+label_settings = SubResource("LabelSettings_i7bs6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="SortPanel" type="Panel" parent="." unique_id=1334710917]
 z_index = 1
 layout_mode = 0
@@ -656,10 +725,13 @@ stream = ExtResource("18_uhu3g")
 [connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/3DRPG" to="BGenrePanel" method="_on_3d_rpg_button_pressed"]
 [connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/LifeSim" to="BGenrePanel" method="_on_mouse_entered"]
 [connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/LifeSim" to="BGenrePanel" method="_on_life_sim_button_pressed"]
+[connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/Adventure" to="BGenrePanel" method="_on_mouse_entered"]
+[connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/Adventure" to="BGenrePanel" method="_on_adventure_pressed"]
 [connection signal="mouse_entered" from="InfoPanel/PrevVideoButton" to="InfoPanel" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="InfoPanel/PrevVideoButton" to="InfoPanel" method="_on_prev_video_pressed"]
 [connection signal="mouse_entered" from="InfoPanel/NextVideoButton" to="InfoPanel" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="InfoPanel/NextVideoButton" to="InfoPanel" method="_on_next_video_pressed"]
 [connection signal="mouse_entered" from="InfoPanel/Close" to="InfoPanel" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="InfoPanel/Close" to="InfoPanel" method="_on_close_pressed"]
+[connection signal="pressed" from="InfoPanel/StoreButton" to="BGenrePanel" method="_on_store_button_pressed"]
 [connection signal="pressed" from="SortPanel/TowerDefense" to="BGenrePanel" method="_on_show_all_button_pressed"]

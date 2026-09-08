@@ -6,6 +6,7 @@ extends Panel
 @onready var video_counter_label: Label = $CurrentVideo/VideoCounterLabel
 @onready var click_effect: AudioStreamPlayer = $"../Click"
 @onready var hover_effect: AudioStreamPlayer = $"../Hover"
+@onready var store_button: LinkButton = $StoreButton
 
 var _pending_item_id: String = ""
 var _pending_item_info: Dictionary = {}
@@ -94,6 +95,22 @@ func _update_info_panel_content(item_id: String, item_info: Dictionary) -> void:
 	
 	# Load and play first video
 	_load_video_at_index(0)
+	
+	# Handle store button visibility and URL
+	if store_button:
+		var is_released = item_info.get("Released", "False")
+		var url = item_info.get("URL", "")
+		
+		if is_released == "True" and not url.is_empty():
+			store_button.visible = true
+			# Set the link URL (LinkButton uses the 'uri' property in Godot 4)
+			store_button.uri = url
+			# Optionally set the text if you want to show something else
+			# store_button.text = "Visit Store"  # Uncomment if you want to customize the text
+			print("Store button visible with URL: ", url)
+		else:
+			store_button.visible = false
+			print("Store button hidden (Released: ", is_released, ", URL: ", url, ")")
 
 func _load_video_at_index(index: int) -> void:
 	if not video_player:

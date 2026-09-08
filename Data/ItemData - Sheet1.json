@@ -5,6 +5,8 @@
 	"Type": "Unreal",
 	"Genres": ["3DRPG"],
 	"Description": "A dialogue system i made in UE5 made from scratch using Data Tables to store, edit and short, dialogue, options and choices they can also interact with other Data Tables to short Data Tables per character, it also uses Structures to send that data to blueprints which can be used to give items, save choices or change animations/portraits for RPGs.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["EDIT-DialogueSys-UE5.ogv"]
   },
   "2": {
@@ -13,6 +15,8 @@
 	"Type": "Unity",
 	"Genres": ["2DFighting", "AIBehaviour"],
 	"Description": "An example of multiple types of AI behaviour for a CPU enemy, made using the  FSM method, having 6 actions to choose from each AI has its own script that just grabs what it needs, AI type 1 is more aggressive up close lowering the difficulty if the player dies a lot, AI type 2 is more defensive increasing the difficulty if the enemy dies a lot and AI type 3 being more evasive from the player while using distance attacks.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["EDIT-FightingAI-Unity.ogv"]
   },
   "3": {
@@ -21,6 +25,8 @@
 	"Type": "Web",
 	"Genres": ["WebPage"],
 	"Description": "A Web site that uses GLTF to render 3d models with some options to modify its colors, animations as well as the ability to add multiple models to create panoramas.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["PaginaWeb-HTML5.ogv"]
   },
   "4": {
@@ -29,6 +35,8 @@
 	"Type": "Unity",
 	"Genres": ["3DPuzzle"],
 	"Description": "A group project were each team member had to create a simple puzzle on their own, my part consist on moving statues to certain points by giving them a dynamic collision, in the field there's pressure plates they can only detect the statue objects and will activate or deactivate if the statue is on top of them, once both pressure plates are active they'll open a door to the next room.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["EDIT-Puzzles-UE-converted.ogv"]
   },
   "5": {
@@ -37,6 +45,8 @@
 	"Type": "Unity",
 	"Genres": ["VFX"],
 	"Description": "A collection of different VFX made in Unity using ShaderGraphs using methods like distortion with positions to create a Playstation 1 model, masks with tilings to create in-game animations, Lerps for background and foreground elements, Madcaps and Rimlights for perspective effects or a combination of all of them.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["Abduccion_Final.ogv", "Fire.ogv", "LowPolyDisstortion.ogv", "MetallicMask.ogv", "Planet-Earth.ogv", "RunningDust.ogv", "Silhouette.ogv"]
   },
   "6": {
@@ -45,6 +55,8 @@
 	"Type": "Unreal",
 	"Genres": ["TowerDefense"],
 	"Description": "A group project were my job was to make a store that contains permanent and temporal upgrades through blueprint, each time a wave ends the shop will open automatically, it will generate 3 random Temp upgrades taking the data from a pool that contain effects and graphics for the card, for the Perm upgrades it will generate the same but once you brought one it keeps track of which upgrades you got as well as apply the effect for the tower for the rest of the run.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["EDIT-TDStore-UE-converted.ogv"]
   },
   "7": {
@@ -53,6 +65,8 @@
 	"Type": "Unity",
 	"Genres": ["AIBehaviour", "LifeSim"],
 	"Description": "A virtual pet that has its own schedule, using a behaviour tree, NavMesh and a clock feature, the creature will move randomly through the map using navmesh, the behaviour tree controls it's actions, if the hunger bar is low it will go to eat, if the sleep bar is low it will go to sleep but under certain hours the creature will do an activity like work from 9 am to 3 pm or sleep from 9 am to 6 am thanks to the clock.",
+	"Released": "False",
+	"URL": "",
 	"Videos": ["EDIT-VirtualPet-Unity-converted.ogv"]
   },
   "8": {
@@ -61,6 +75,18 @@
 	"Type": "Godot",
 	"Genres": ["WebPage"],
 	"Description": "A Web site made in Godot to display my contributions to other works, taking the look of an old operating system this proyect offers a dynamic way to insert proyects throught json files displaying icons, descriptions and even videos. A short function that allows you to see certain types of genres or games made by certain game engines.",
+	"Released": "False",
+	"URL": "",
+	"Videos": ["PortfolioVideo.ogv"]
+  },
+  "9": {
+	"Name": "SpaceHook",
+	"Summary": "A space fishing game for a gamejam",
+	"Type": "Unreal",
+	"Genres": ["Adventure"],
+	"Description": "A Fishing type game made for the Lamejam 2026 where you control a spaceship who needs to grab space fishes through the stars, in this case my part was making the movement and animation setup of the player including adding some animation notify logic to some animations.",
+	"Released": "True",
+	"URL": "https://rapidkillz.itch.io/spacehook",
 	"Videos": ["PortfolioVideo.ogv"]
   }
 }
