@@ -2,14 +2,17 @@
 
 [ext_resource type="Script" uid="uid://ujmyarvot6rf" path="res://Scripts/InventLink.gd" id="1_fh7cp"]
 [ext_resource type="FontFile" uid="uid://u87bs8o77s8v" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="3_df05h"]
+[ext_resource type="Texture2D" uid="uid://p0dwa8fu5grx" path="res://Assets/Sprites/Clouds.png" id="5_ydmd8"]
 [ext_resource type="Script" uid="uid://csbbdahh8yqau" path="res://Scripts/MMButton.gd" id="7_xim88"]
 [ext_resource type="Script" uid="uid://dwbyi8immmwln" path="res://Scripts/ButtonPopUp.gd" id="8_cmrfp"]
 [ext_resource type="Texture2D" uid="uid://dihki0l6fgfbe" path="res://Assets/Sprites/Currículum hoja de vida laboral profesional formal azul.png" id="9_cmrfp"]
 [ext_resource type="Texture2D" uid="uid://cn0ifsfiv5rey" path="res://Assets/Sprites/MenusBar.png" id="11_6byu3"]
 [ext_resource type="Texture2D" uid="uid://cttvr34rmw8v3" path="res://Assets/Sprites/BackgroundPF1.png" id="12_fh7cp"]
+[ext_resource type="Texture2D" uid="uid://cf76g815lw4u4" path="res://Assets/Sprites/Islands.png" id="12_rplfc"]
 [ext_resource type="Script" uid="uid://ctvpyxvbkdgmv" path="res://Scripts/LinkData.gd" id="12_rrcx7"]
 [ext_resource type="Texture2D" uid="uid://cdo7ffnque38c" path="res://Assets/Sprites/ButtonBar.png" id="13_6byu3"]
 [ext_resource type="Texture2D" uid="uid://c6fn86v3tdg0o" path="res://Assets/Sprites/Clouds1.png" id="13_8e205"]
+[ext_resource type="Texture2D" uid="uid://dvbvsugseayki" path="res://Assets/Sprites/Sun.png" id="13_rplfc"]
 [ext_resource type="Texture2D" uid="uid://m5d70634rr3v" path="res://Assets/Sprites/Clouds2.png" id="14_7467j"]
 [ext_resource type="Texture2D" uid="uid://i7yo6s4wwc52" path="res://Assets/Sprites/ButtonBarHigh.png" id="14_leunp"]
 [ext_resource type="Texture2D" uid="uid://b4dgoq3l4wyl" path="res://Assets/Sprites/Clouds3.png" id="15_2x1g0"]
@@ -152,6 +155,14 @@ z_index = 3
 position = Vector2(960, 438)
 texture = ExtResource("13_8e205")
 
+[node name="CloudReflection" type="Sprite2D" parent="Background/Clouds1" unique_id=1534644602]
+modulate = Color(1, 1, 1, 0.39215687)
+self_modulate = Color(1, 1, 1, 0.39215687)
+z_index = 1
+position = Vector2(960, 662)
+texture = ExtResource("5_ydmd8")
+flip_v = true
+
 [node name="Clouds2" type="Parallax2D" parent="Background" unique_id=1833200772]
 texture_filter = 1
 scroll_offset = Vector2(0, -364)
@@ -220,6 +231,21 @@ autoscroll = Vector2(-25, 0)
 z_index = 1
 position = Vector2(961, 1055)
 texture = ExtResource("19_65hh5")
+
+[node name="Island" type="Sprite2D" parent="Background" unique_id=1163072769]
+position = Vector2(925, 498)
+texture = ExtResource("12_rplfc")
+
+[node name="IslandReflection" type="Sprite2D" parent="Background/Island" unique_id=18610971]
+modulate = Color(1, 1, 1, 0.39215687)
+self_modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(0, 105)
+texture = ExtResource("12_rplfc")
+flip_v = true
+
+[node name="Sun" type="Sprite2D" parent="Background" unique_id=460844260]
+position = Vector2(953, 162)
+texture = ExtResource("13_rplfc")
 
 [node name="LowBar" type="Panel" parent="." unique_id=737782414]
 z_index = 6
