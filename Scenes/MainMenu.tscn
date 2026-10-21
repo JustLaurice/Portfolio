@@ -386,7 +386,7 @@ theme_override_fonts/font = ExtResource("3_df05h")
 theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxTexture_8saeu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_koqhg")
-text = "Proyects"
+text = "Projects"
 icon = ExtResource("20_5hdia")
 expand_icon = true
 
