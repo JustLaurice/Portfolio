@@ -35,9 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://dao47njjtvfsj" path="res://Assets/Sprites/MenusBarALT.png" id="28_3u44c"]
 [ext_resource type="Texture2D" uid="uid://d1bkapx4wc0u" path="res://Assets/Sprites/ButtonBarHighALT.png" id="29_bxv1r"]
 [ext_resource type="LabelSettings" uid="uid://s8uc7h2u4rsm" path="res://Singletons/Text_Label_Outline.tres" id="33_fipmv"]
-[ext_resource type="Texture2D" uid="uid://d2cbrl5qbiglx" path="res://Assets/Sprites/ProfilePicture.png" id="33_ow4wq"]
 [ext_resource type="AudioStream" uid="uid://cobcg3ro0kjb4" path="res://Assets/Sounds/click.ogg" id="34_ow4wq"]
 [ext_resource type="AudioStream" uid="uid://cdkswhas6newd" path="res://Assets/Sounds/focus.wav" id="35_o66vf"]
+[ext_resource type="Texture2D" uid="uid://dq110nm1o7i58" path="res://Assets/Sprites/PFP.jpg" id="36_rplfc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ghw46"]
 texture = ExtResource("11_6byu3")
@@ -458,7 +458,7 @@ offset_bottom = 23.0
 [node name="AboutMe" type="Window" parent="." unique_id=1830636092]
 oversampling_override = 1.0
 title = "About me"
-position = Vector2i(1144, 47)
+position = Vector2i(1138, 36)
 size = Vector2i(750, 650)
 visible = false
 unresizable = true
@@ -571,15 +571,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("33_ow4wq")
+texture = ExtResource("36_rplfc")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Contacts" type="Window" parent="." unique_id=851157228]
 oversampling_override = 1.0
 title = "Contact Me"
-position = Vector2i(893, 639)
+position = Vector2i(895, 636)
 size = Vector2i(1000, 300)
 visible = false
 unresizable = true
