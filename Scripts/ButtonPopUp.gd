@@ -3,6 +3,9 @@ extends Button
 @export var popup_window: Window
 @onready var click_effect: AudioStreamPlayer = $"../../../../Click"
 @onready var hover_effect: AudioStreamPlayer = $"../../../../Hover"
+@export var about_me_window: Window
+@export var contacts_window: Window
+@export var cv_window: Window
 
 func _ready() -> void:
 	# Add popup window to group for easy access
@@ -24,3 +27,12 @@ func _on_mouse_entered() -> void:
 func _on_proyects_pressed() -> void:
 	click_effect.play()
 	SceneTransition.change_scene("res://Scenes/ProjectsWindows.tscn")
+
+func _on_about_me_close_requested() -> void:
+	about_me_window.hide()
+
+func _on_contacts_close_requested() -> void:
+	contacts_window.hide()
+
+func _on_cv_close_requested() -> void:
+	cv_window.hide()

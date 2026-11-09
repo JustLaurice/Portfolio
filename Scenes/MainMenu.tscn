@@ -348,7 +348,7 @@ grow_vertical = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="AbMe" type="Button" parent="MenuBar/Panel2/VBoxContainer" unique_id=2035130555 node_paths=PackedStringArray("popup_window")]
+[node name="AbMe" type="Button" parent="MenuBar/Panel2/VBoxContainer" unique_id=2035130555 node_paths=PackedStringArray("popup_window", "about_me_window", "contacts_window", "cv_window")]
 z_index = 1
 layout_mode = 2
 size_flags_vertical = 4
@@ -362,6 +362,9 @@ icon = ExtResource("17_leunp")
 expand_icon = true
 script = ExtResource("8_cmrfp")
 popup_window = NodePath("../../../../AboutMe")
+about_me_window = NodePath("../../../../AboutMe")
+contacts_window = NodePath("../../../../Contacts")
+cv_window = NodePath("../../../../CV")
 
 [node name="CV" type="Button" parent="MenuBar/Panel2/VBoxContainer" unique_id=435507307 node_paths=PackedStringArray("popup_window")]
 z_index = 1
@@ -692,6 +695,6 @@ stream = ExtResource("35_o66vf")
 [connection signal="pressed" from="MenuBar/Panel2/VBoxContainer/P" to="MenuBar/Panel2/VBoxContainer/AbMe" method="_on_proyects_pressed"]
 [connection signal="mouse_entered" from="MenuBar/Panel2/VBoxContainer/C" to="MenuBar/Panel2/VBoxContainer/C" method="_on_mouse_entered"]
 [connection signal="pressed" from="MenuBar/Panel2/VBoxContainer/C" to="MenuBar/Panel2/VBoxContainer/C" method="_on_pressed"]
-[connection signal="close_requested" from="CV" to="MenuBar/Panel2/VBoxContainer/CV" method="_on_cv_close_requested"]
+[connection signal="close_requested" from="CV" to="MenuBar/Panel2/VBoxContainer/AbMe" method="_on_cv_close_requested"]
 [connection signal="close_requested" from="AboutMe" to="MenuBar/Panel2/VBoxContainer/AbMe" method="_on_about_me_close_requested"]
-[connection signal="close_requested" from="Contacts" to="MenuBar/Panel2/VBoxContainer/C" method="_on_contacts_close_requested"]
+[connection signal="close_requested" from="Contacts" to="MenuBar/Panel2/VBoxContainer/AbMe" method="_on_contacts_close_requested"]
