@@ -407,7 +407,7 @@ popup_window = NodePath("../../../../Contacts")
 [node name="CV" type="Window" parent="." unique_id=1915719860]
 oversampling_override = 1.0
 title = "Curriculum Vitae"
-initial_position = 1
+position = Vector2i(394, 36)
 size = Vector2i(700, 900)
 visible = false
 unresizable = true
@@ -458,7 +458,7 @@ offset_bottom = 23.0
 [node name="AboutMe" type="Window" parent="." unique_id=1830636092]
 oversampling_override = 1.0
 title = "About me"
-initial_position = 1
+position = Vector2i(1144, 47)
 size = Vector2i(750, 650)
 visible = false
 unresizable = true
@@ -552,27 +552,25 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="PFP" type="Panel" parent="AboutMe" unique_id=1532357761]
-anchors_preset = -1
-anchor_left = 0.34375
-anchor_top = 0.30769232
-anchor_right = 0.65625
-anchor_bottom = 0.6923077
-offset_top = -184.0
-offset_bottom = -184.0
+[node name="Description2" type="Panel" parent="AboutMe" unique_id=974538576]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -307.0
+offset_right = 131.0
+offset_bottom = -57.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_bxv1r")
-metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="AboutMe/PFP" unique_id=943218393]
+[node name="TextureRect" type="TextureRect" parent="AboutMe/Description2" unique_id=943218393]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.022133334
-anchor_top = 0.02
-anchor_right = 0.97786665
-anchor_bottom = 0.98
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("33_ow4wq")
@@ -581,7 +579,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Contacts" type="Window" parent="." unique_id=851157228]
 oversampling_override = 1.0
 title = "Contact Me"
-initial_position = 1
+position = Vector2i(893, 639)
 size = Vector2i(1000, 300)
 visible = false
 unresizable = true
