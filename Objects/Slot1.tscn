@@ -7,8 +7,11 @@
 [ext_resource type="AudioStream" uid="uid://cdkswhas6newd" path="res://Assets/Sounds/focus.wav" id="5_ojmp8"]
 
 [node name="slot0" type="Button" unique_id=1588561096]
-offset_right = 160.0
-offset_bottom = 180.0
+anchors_preset = -1
+anchor_right = 0.083000004
+anchor_bottom = 0.186
+offset_right = 0.63998413
+offset_bottom = 0.13800049
 script = ExtResource("1_eoud3")
 
 [node name="Icon" type="TextureRect" parent="." unique_id=2098184419]

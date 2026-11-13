@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dytxmxnci61xe" path="res://Scripts/button.gd" id="6_21aso"]
 [ext_resource type="Script" uid="uid://bogbqwn23tp0l" path="res://Scripts/GenrePanel.gd" id="7_d14eb"]
 [ext_resource type="Script" uid="uid://dr173wyeixf0" path="res://Scripts/InfoPanel.gd" id="8_l3cdh"]
+[ext_resource type="Texture2D" uid="uid://cdrrjpcext48x" path="res://Assets/Sprites/GameBorderBG.png" id="9_4hl4j"]
 [ext_resource type="Texture2D" uid="uid://d2ewln4q3imxm" path="res://Assets/Icon_Items/Play.png" id="9_ry13m"]
 [ext_resource type="Texture2D" uid="uid://j3ofox7phxo8" path="res://Assets/Icon_Items/Stop.png" id="15_dnosv"]
 [ext_resource type="AudioStream" uid="uid://cobcg3ro0kjb4" path="res://Assets/Sounds/click.ogg" id="17_a7syu"]
@@ -26,6 +27,42 @@ shader_parameter/water = Color(0.6537862, 0.78243506, 0.9152887, 1)
 shader_parameter/speed = 1.0
 shader_parameter/wave = 9.99999977648
 shader_parameter/warp = 2.49999994784532
+
+[sub_resource type="LabelSettings" id="LabelSettings_4hl4j"]
+font = ExtResource("3_p23kf")
+font_size = 48
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qae3w"]
+texture = ExtResource("9_4hl4j")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.2784314, 0.54901963, 0.7490196, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1o8im"]
+texture = ExtResource("9_4hl4j")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e7t6u"]
+texture = ExtResource("9_4hl4j")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.6784314, 0.003921569, 0.003921569, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_al1nd"]
+texture = ExtResource("9_4hl4j")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+modulate_color = Color(0.5019608, 0, 0.5019608, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dnosv"]
 texture = ExtResource("3_won51")
@@ -239,60 +276,191 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GodotContainer" type="ScrollContainer" parent="Projects/VBoxContainer" unique_id=756936080]
+[node name="GodotContainer" type="Control" parent="Projects/VBoxContainer" unique_id=2084989583]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_vertical = 3
-draw_focus_border = true
 
 [node name="GridGodot" type="GridContainer" parent="Projects/VBoxContainer/GodotContainer" unique_id=912959865]
-layout_mode = 2
+layout_mode = 0
+offset_left = 6.0
+offset_top = 64.0
+offset_right = 1622.0
+offset_bottom = 294.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 250
 theme_override_constants/v_separation = 250
 columns = 10
 
-[node name="UnityContainer" type="ScrollContainer" parent="Projects/VBoxContainer" unique_id=964143257]
+[node name="Label" type="Label" parent="Projects/VBoxContainer/GodotContainer" unique_id=721732054]
+z_index = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 1622.0
+offset_bottom = 49.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_p23kf")
+text = "GODOT"
+label_settings = SubResource("LabelSettings_4hl4j")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Projects/VBoxContainer/GodotContainer/Label" unique_id=1393449552]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_qae3w")
+
+[node name="UnityContainer" type="Control" parent="Projects/VBoxContainer" unique_id=1436106687]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="GridUnity" type="GridContainer" parent="Projects/VBoxContainer/UnityContainer" unique_id=1310688675]
-layout_mode = 2
+layout_mode = 0
+offset_left = 6.0
+offset_top = 64.0
+offset_right = 1622.0
+offset_bottom = 294.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 250
 theme_override_constants/v_separation = 250
 columns = 10
 
-[node name="UnrealContainer" type="ScrollContainer" parent="Projects/VBoxContainer" unique_id=1620645638]
+[node name="Label" type="Label" parent="Projects/VBoxContainer/UnityContainer" unique_id=1485366861]
+z_index = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 1622.0
+offset_bottom = 49.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_p23kf")
+text = "UNITY"
+label_settings = SubResource("LabelSettings_4hl4j")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Projects/VBoxContainer/UnityContainer/Label" unique_id=14053282]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_1o8im")
+
+[node name="UnrealContainer" type="Control" parent="Projects/VBoxContainer" unique_id=1460133272]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="GridUnreal" type="GridContainer" parent="Projects/VBoxContainer/UnrealContainer" unique_id=1296216929]
-layout_mode = 2
+layout_mode = 0
+offset_left = 6.0
+offset_top = 64.0
+offset_right = 1622.0
+offset_bottom = 294.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 250
 theme_override_constants/v_separation = 250
 columns = 10
 
-[node name="WebContainer" type="ScrollContainer" parent="Projects/VBoxContainer" unique_id=1916845468]
+[node name="Label" type="Label" parent="Projects/VBoxContainer/UnrealContainer" unique_id=550386086]
+z_index = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 1622.0
+offset_bottom = 49.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_p23kf")
+text = "UNREAL ENGINE"
+label_settings = SubResource("LabelSettings_4hl4j")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Projects/VBoxContainer/UnrealContainer/Label" unique_id=404363936]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_e7t6u")
+
+[node name="WebContainer" type="Control" parent="Projects/VBoxContainer" unique_id=317563966]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="GridWeb" type="GridContainer" parent="Projects/VBoxContainer/WebContainer" unique_id=12068266]
-layout_mode = 2
+layout_mode = 0
+offset_left = 6.0
+offset_top = 64.0
+offset_right = 1622.0
+offset_bottom = 294.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 250
 theme_override_constants/v_separation = 250
 columns = 10
 
-[node name="Buttons" type="MarginContainer" parent="." unique_id=2045001844]
+[node name="Label" type="Label" parent="Projects/VBoxContainer/WebContainer" unique_id=35487380]
+z_index = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 1622.0
+offset_bottom = 49.0
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("3_p23kf")
+text = "WEB"
+label_settings = SubResource("LabelSettings_4hl4j")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="Projects/VBoxContainer/WebContainer/Label" unique_id=1826171483]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_al1nd")
+
+[node name="PriorityToggle" type="MarginContainer" parent="." unique_id=2045001844]
 z_index = 1
 layout_mode = 0
 offset_left = 284.0
@@ -300,11 +468,11 @@ offset_top = 75.0
 offset_right = 1920.0
 offset_bottom = 134.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=1908681759]
+[node name="HBoxContainer" type="HBoxContainer" parent="PriorityToggle" unique_id=1908681759]
 layout_mode = 2
 alignment = 1
 
-[node name="GodotToggle" type="Button" parent="Buttons/HBoxContainer" unique_id=898180061]
+[node name="GodotToggle" type="Button" parent="PriorityToggle/HBoxContainer" unique_id=898180061]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("3_p23kf")
@@ -313,7 +481,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dnosv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
 text = "Hide Godot projects"
 
-[node name="UnityToggle" type="Button" parent="Buttons/HBoxContainer" unique_id=1202765215]
+[node name="UnityToggle" type="Button" parent="PriorityToggle/HBoxContainer" unique_id=1202765215]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("3_p23kf")
@@ -322,7 +490,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dnosv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
 text = "Hide Unity projects"
 
-[node name="UnrealToggle" type="Button" parent="Buttons/HBoxContainer" unique_id=1423713054]
+[node name="UnrealToggle" type="Button" parent="PriorityToggle/HBoxContainer" unique_id=1423713054]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("3_p23kf")
@@ -331,7 +499,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_dnosv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
 text = "Hide Unreal projects"
 
-[node name="WebToggle" type="Button" parent="Buttons/HBoxContainer" unique_id=413003764]
+[node name="WebToggle" type="Button" parent="PriorityToggle/HBoxContainer" unique_id=413003764]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_fonts/font = ExtResource("3_p23kf")
@@ -437,7 +605,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
 text = "VFX
 "
 
-[node name="WebPage" type="Button" parent="BGenrePanel/ScrollContainer/VBoxContainer" unique_id=776209301]
+[node name="Website" type="Button" parent="BGenrePanel/ScrollContainer/VBoxContainer" unique_id=776209301]
 custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 size_flags_vertical = 3
@@ -445,7 +613,7 @@ theme_override_fonts/font = ExtResource("3_p23kf")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_dnosv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p23kf")
-text = "Web Page
+text = "Website
 
 "
 
@@ -672,7 +840,7 @@ offset_right = 284.0
 offset_bottom = 134.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_164yw")
 
-[node name="TowerDefense" type="Button" parent="SortPanel" unique_id=1288105044]
+[node name="SortAll" type="Button" parent="SortPanel" unique_id=1288105044]
 custom_minimum_size = Vector2(0, 46)
 layout_mode = 1
 anchors_preset = 8
@@ -699,14 +867,14 @@ stream = ExtResource("17_a7syu")
 [node name="Hover" type="AudioStreamPlayer" parent="." unique_id=2086839849]
 stream = ExtResource("18_uhu3g")
 
-[connection signal="mouse_entered" from="Buttons/HBoxContainer/GodotToggle" to="BGenrePanel" method="_on_mouse_entered"]
-[connection signal="pressed" from="Buttons/HBoxContainer/GodotToggle" to="BGenrePanel" method="_on_godot_toggle_pressed"]
-[connection signal="mouse_entered" from="Buttons/HBoxContainer/UnityToggle" to="BGenrePanel" method="_on_mouse_entered"]
-[connection signal="pressed" from="Buttons/HBoxContainer/UnityToggle" to="BGenrePanel" method="_on_unity_toggle_pressed"]
-[connection signal="mouse_entered" from="Buttons/HBoxContainer/UnrealToggle" to="BGenrePanel" method="_on_mouse_entered"]
-[connection signal="pressed" from="Buttons/HBoxContainer/UnrealToggle" to="BGenrePanel" method="_on_unreal_toggle_pressed"]
-[connection signal="mouse_entered" from="Buttons/HBoxContainer/WebToggle" to="BGenrePanel" method="_on_mouse_entered"]
-[connection signal="pressed" from="Buttons/HBoxContainer/WebToggle" to="BGenrePanel" method="_on_web_toggle_pressed"]
+[connection signal="mouse_entered" from="PriorityToggle/HBoxContainer/GodotToggle" to="BGenrePanel" method="_on_mouse_entered"]
+[connection signal="pressed" from="PriorityToggle/HBoxContainer/GodotToggle" to="BGenrePanel" method="_on_godot_toggle_pressed"]
+[connection signal="mouse_entered" from="PriorityToggle/HBoxContainer/UnityToggle" to="BGenrePanel" method="_on_mouse_entered"]
+[connection signal="pressed" from="PriorityToggle/HBoxContainer/UnityToggle" to="BGenrePanel" method="_on_unity_toggle_pressed"]
+[connection signal="mouse_entered" from="PriorityToggle/HBoxContainer/UnrealToggle" to="BGenrePanel" method="_on_mouse_entered"]
+[connection signal="pressed" from="PriorityToggle/HBoxContainer/UnrealToggle" to="BGenrePanel" method="_on_unreal_toggle_pressed"]
+[connection signal="mouse_entered" from="PriorityToggle/HBoxContainer/WebToggle" to="BGenrePanel" method="_on_mouse_entered"]
+[connection signal="pressed" from="PriorityToggle/HBoxContainer/WebToggle" to="BGenrePanel" method="_on_web_toggle_pressed"]
 [connection signal="mouse_entered" from="HeaderPanel/Button" to="HeaderPanel/Button" method="_on_mouse_entered"]
 [connection signal="pressed" from="HeaderPanel/Button" to="HeaderPanel/Button" method="_on_pressed"]
 [connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/TowerDefense" to="BGenrePanel" method="_on_mouse_entered"]
@@ -715,8 +883,8 @@ stream = ExtResource("18_uhu3g")
 [connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/AIBehaviour" to="BGenrePanel" method="_on_ai_behaviour_button_pressed"]
 [connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/VFX" to="BGenrePanel" method="_on_mouse_entered"]
 [connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/VFX" to="BGenrePanel" method="_on_vfx_button_pressed"]
-[connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/WebPage" to="BGenrePanel" method="_on_mouse_entered"]
-[connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/WebPage" to="BGenrePanel" method="_on_web_page_button_pressed"]
+[connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/Website" to="BGenrePanel" method="_on_mouse_entered"]
+[connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/Website" to="BGenrePanel" method="_on_web_page_button_pressed"]
 [connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/2DFighting" to="BGenrePanel" method="_on_mouse_entered"]
 [connection signal="pressed" from="BGenrePanel/ScrollContainer/VBoxContainer/2DFighting" to="BGenrePanel" method="_on_2d_fighting_button_pressed"]
 [connection signal="mouse_entered" from="BGenrePanel/ScrollContainer/VBoxContainer/3DPuzzle" to="BGenrePanel" method="_on_mouse_entered"]
@@ -734,4 +902,4 @@ stream = ExtResource("18_uhu3g")
 [connection signal="mouse_entered" from="InfoPanel/Close" to="InfoPanel" method="_on_button_mouse_entered"]
 [connection signal="pressed" from="InfoPanel/Close" to="InfoPanel" method="_on_close_pressed"]
 [connection signal="pressed" from="InfoPanel/StoreButton" to="BGenrePanel" method="_on_store_button_pressed"]
-[connection signal="pressed" from="SortPanel/TowerDefense" to="BGenrePanel" method="_on_show_all_button_pressed"]
+[connection signal="pressed" from="SortPanel/SortAll" to="BGenrePanel" method="_on_show_all_button_pressed"]
