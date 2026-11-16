@@ -1,16 +1,16 @@
 {
   "1": {
-	"Name": "armin.posadas.ap@gmail.com",
+	"Name": "Send me an Email",
 	"Icon": "Mail",
 	"URL": "mailto:armin.posadas.ap@gmail.com"
   },
   "2": {
-	"Name": "Linkedin",
+	"Name": "My Linkedin",
 	"Icon": "Link",
 	"URL": "https://linkedin.com/in/armin-posadas-flores-73511130b"
   },
   "3": {
-	"Name": "Github",
+	"Name": "My Github",
 	"Icon": "Git",
 	"URL": "https://github.com/ArminPosadas"
   }

@@ -35,24 +35,18 @@ func _ready() -> void:
 
 # Panel management
 func show_all_panels() -> void:
-	# Since we no longer hide them, this just ensures they are visible
+	# ensures they are visible
 	for panel in panels.values():
 		if panel:
 			panel.visible = true
 
-func hide_empty_panels() -> void:
-	# Hiding is disabled per your request. 
-	# This function is kept empty so it doesn't break other scripts that might call it.
-	pass
-
-# New function to move a container to the top without hiding others
+# move a container to the top
 func move_to_top(panel_name: String) -> void:
 	if panels.has(panel_name) and panels[panel_name]:
 		var target_panel = panels[panel_name]
 		vbox_container.move_child(target_panel, 0)
 
 func toggle_panel(panel_name: String) -> void:
-	# Changed from toggle visibility to move to top
 	move_to_top(panel_name)
 
 func get_grid(panel_name: String) -> GridContainer:
